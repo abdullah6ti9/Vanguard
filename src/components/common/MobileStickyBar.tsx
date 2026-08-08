@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Calculator } from 'lucide-react';
+import { Phone, ArrowUpRight } from 'lucide-react';
 import { businessInfo } from '../../data/businessInfo';
 
 interface MobileStickyBarProps {
@@ -8,22 +8,23 @@ interface MobileStickyBarProps {
 
 export const MobileStickyBar: React.FC<MobileStickyBarProps> = ({ onOpenQuoteModal }) => {
   return (
-    <div className="fixed bottom-0 inset-x-0 z-40 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 p-2.5 sm:hidden shadow-2xl flex items-center gap-2">
+    <div className="fixed bottom-0 inset-x-0 z-40 bg-slate-950/90 backdrop-blur-xl border-t border-slate-800/80 p-3 sm:hidden shadow-2xl flex items-center gap-3">
       <a
         href={`tel:${businessInfo.phone}`}
-        className="flex-1 inline-flex items-center justify-center py-3 px-3 rounded-xl bg-slate-900 border border-slate-700 text-white font-bold text-sm hover:bg-slate-800 active:bg-slate-950 transition-colors shadow-sm"
+        className="flex-1 inline-flex items-center justify-center py-3 px-4 rounded-full bg-slate-900 border border-slate-700/80 text-slate-200 font-bold text-xs uppercase tracking-wider hover:bg-slate-800 transition-colors"
       >
-        <Phone className="w-4 h-4 mr-2 text-amber-400 fill-amber-400/20" />
-        Call Now
+        <Phone className="w-3.5 h-3.5 mr-2 text-amber-400" />
+        Call
       </a>
 
       <button
         onClick={onOpenQuoteModal}
-        className="flex-1 inline-flex items-center justify-center py-3 px-3 rounded-xl bg-amber-500 text-slate-950 font-extrabold text-sm hover:bg-amber-400 active:bg-amber-600 transition-colors shadow-lg shadow-amber-500/20 border border-amber-400 cursor-pointer"
+        className="flex-1 inline-flex items-center justify-center py-3 px-4 rounded-full bg-amber-500 text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-amber-400 transition-all shadow-lg cursor-pointer space-x-1"
       >
-        <Calculator className="w-4 h-4 mr-2 stroke-[2.5]" />
-        Get Free Quote
+        <span>Get a Quote</span>
+        <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
       </button>
     </div>
   );
 };
+
