@@ -1,0 +1,6 @@
+{
+  "name": "Vanguard Craftsmen Contracting | General Contractor",
+  "description": "High-converting professional general contractor website featuring home renovation services, before/after project showcase, interactive multi-step quote request builder, local zip code checker, and transparent pricing estimates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
